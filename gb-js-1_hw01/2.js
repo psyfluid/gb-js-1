@@ -7,11 +7,11 @@
 Вывести значение переменной admin в консоль.
 */
 
-function show_admin_console(admin) {
+function showAdminConsole(admin) {
     console.log(`admin = ${admin}`);
 }
 
 const username = prompt("Введите ваше имя:");
 const admin = username;
 
-show_admin_console(admin);
+showAdminConsole(admin);
