@@ -13,7 +13,7 @@
  * @returns {number} net salary
  */
 const getNetSalary = function convertGrossSalaryToNetSalary(salary) {
-  return salary * 0.87;
+  return Math.round(salary * 0.87 * 100) / 100;
 };
 
 const grossSalary = +prompt('Введите размер заработной платы до вычета налога');
