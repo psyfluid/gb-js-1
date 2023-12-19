@@ -21,5 +21,5 @@ const grossSalary = +prompt('Введите размер заработной п
 if (Number.isFinite(grossSalary) && grossSalary > 0) {
   console.log(`Размер заработной платы за вычетом налогов равен ${getNetSalary(grossSalary)}`);
 } else {
-  console.log(`Значение задано неверно`);
+  console.log('Значение задано неверно');
 }

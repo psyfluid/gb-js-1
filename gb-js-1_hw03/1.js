@@ -11,7 +11,7 @@
  * @returns {number} third power of number
  */
 const getPow3 = function calculateThirdPowerOfNumber(num) {
-    return num ** 3;
+  return num ** 3;
 };
 
 console.log(getPow3(2) + getPow3(3));
