@@ -15,23 +15,22 @@
 */
 
 const randNumbers = [];
-
-for (let i = 0; i < 5; i++) {
-  randNumbers.push(Math.floor(Math.random() * 10));
-}
-
-console.log(`Array of random numbers: [${randNumbers}]`);
-
+let curNum;
 let arrSum = 0;
 const arrIndices = [];
 
-randNumbers.forEach((element, index) => {
-  arrSum += element;
-  if (element === 3) {
-    arrIndices.push(index);
-  }
-});
+for (let i = 0; i < 5; i++) {
+  curNum = Math.floor(Math.random() * 10);
+  randNumbers.push(curNum);
 
+  arrSum += curNum;
+
+  if (curNum === 3) {
+    arrIndices.push(i);
+  }
+}
+
+console.log(`Array of random numbers: [${randNumbers}]`);
 console.log(`Sum of array: ${arrSum}`);
 console.log(`Minimum value of array: ${Math.min(...randNumbers)}`);
 console.log(`Array of indices with value '3': [${arrIndices}]`);
