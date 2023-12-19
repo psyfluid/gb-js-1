@@ -15,15 +15,19 @@
 */
 
 const randNumbers = [];
-let curNum;
 let arrSum = 0;
+let minValue = 10;
 const arrIndices = [];
 
 for (let i = 0; i < 5; i++) {
-  curNum = Math.floor(Math.random() * 10);
+  const curNum = Math.floor(Math.random() * 10);
   randNumbers.push(curNum);
 
   arrSum += curNum;
+
+  if (curNum < minValue) {
+    minValue = curNum;
+  }
 
   if (curNum === 3) {
     arrIndices.push(i);
@@ -32,5 +36,5 @@ for (let i = 0; i < 5; i++) {
 
 console.log(`Array of random numbers: [${randNumbers}]`);
 console.log(`Sum of array: ${arrSum}`);
-console.log(`Minimum value of array: ${Math.min(...randNumbers)}`);
+console.log(`Minimum value of array: ${minValue}`);
 console.log(`Array of indices with value '3': [${arrIndices}]`);
