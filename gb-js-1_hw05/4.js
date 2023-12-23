@@ -31,5 +31,5 @@ const productsNew = [
   },
 ];
 
-console.log(productsNew.filter((product) => product.photos && product.photos.length > 0));
+console.log(productsNew.filter((product) => product.photos && product.photos.length));
 console.log(productsNew.sort((a, b) => a.price - b.price));
